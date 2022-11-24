@@ -1,20 +1,20 @@
 # PID Tuner
-Author：Felix
-Date：2022.11.24
-QQ：0x3338233D
-If you like it, please give me a star, thank you~
+Author：Felix  
+Date：2022.11.24  
+QQ：0x3338233D  
+If you like it, please give me a star, thank you~  
 
 ## Terrible Adjusting
-Everytime adjusting PID, I am nearly crazy!!!
-I have to observe the Intelligent Car running in, running out.
-I have to observe so many figures.
-I have to change Kp, Ki, Kd manually.
-I have to chagne Kp, Ki, Kd slightly(0.001) and repeatly.
-Damn, I do not have that patience.
+Everytime adjusting PID, I am nearly crazy!!!  
+I have to observe the Intelligent Car running in, running out.  
+I have to observe so many figures.  
+I have to change Kp, Ki, Kd manually.  
+I have to chagne Kp, Ki, Kd slightly(0.001) and repeatly.  
+Damn, I do not have that patience.  
 
-Okay, now, all of that can be done by computer.
-You just need to tell it, how much fast, how much steady.
-It is easier, faster and better.
+Okay, now, all of that can be done by computer.  
+You just need to tell it, how much fast, how much steady.  
+It is easier, faster and better.  
 
 ## Project File Structure
 1. aircraft.py：a non-linear test model
@@ -24,7 +24,7 @@ It is easier, faster and better.
 5. test_bench_nonlinear.py：continuous function, track test
 
 ## Core Concept
-First, we should know:
+First, we should know:  
 1. Kp,Ki,Kd have different and irrelevant effects. We adjust PID parameters, in fact, we are to find a best ratio among P Effect, I Effect and D Effect.
 2. PID has not a globally best parameter. Fast, Accurate, Steady, these three optimization objectives are not both-had. So we always find a balance among Fast, Accurate and Steady.
 3. The optimization always getting better, Kp,Ki,Kd increase from 0 to a limited up-boundary.
@@ -51,5 +51,5 @@ When use PID Tuner, we need to observe these values:
 2. AveErr：which shows the Generally Average Error. 
 
 ## Optimization Method
-To make PID Tuner faster and delicate, one thing I recommand:
+To make PID Tuner faster and delicate, one thing I recommand:  
 Normalize your PID Input and Output to [-1,+1].
